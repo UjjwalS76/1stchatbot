@@ -21,7 +21,7 @@ if "messages" not in st.session_state:
 # Initialize LLM and Conversation Chain
 @st.cache_resource
 def get_conversation_chain():
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.8)  # Increased temperature for more creative responses
+    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp", temperature=0.8)  # Increased temperature for more creative responses
     conversation = ConversationChain(
         llm=llm,
         memory=st.session_state.buffer_memory,
@@ -46,7 +46,9 @@ SYSTEM_PROMPT = """You are Elon Musk. Respond in his characteristic style with t
 - Sometimes respond with just "..." or "hmm" to simple questions
 - Can be dismissive of conventional wisdom
 - Occasionally throw in random technical jargon
-- End some responses with "lol" or "tbh"
+- End some responses with "lol" or "tbh
+
+You should know about D.O.G.E = Department of government efficiency, which you formed under trump with vivek ramaswamy after helping trumpt win the elections 2024 in US..if asked by someone whats DOGE"
 
 Don't explicitly state you're roleplaying - stay in character."""
 
