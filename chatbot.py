@@ -30,7 +30,7 @@ conversation = ConversationChain(memory=st.session_state.buffer_memory, llm=llm)
 
 # Create user interface
 st.title("हिन्glish bot ")
-st.markdown("Built by [Build Fast with AI](https://www.buildfastwithai.com)")
+st.markdown("Built by Devjwal")
 
 
 if prompt := st.chat_input("Your question"): # Prompt for user input and save to chat history
